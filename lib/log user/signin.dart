@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/model/color.dart';
 
+import '../model/nav.dart';
+
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
 
@@ -28,15 +30,12 @@ class _SignInPageState extends State<SignInPage> {
                     margin: EdgeInsets.only(top: 50, left: 15),
                     alignment: Alignment.centerLeft,
                     child: GestureDetector(
-                      onTap: () {},
-                      child: CircleAvatar(
-                        backgroundColor: Colors.grey.withOpacity(0.2),
-                        child: Icon(
-                          Icons.arrow_back_ios_new,
-                          size: 17,
-                        ),
-                      ),
-                    )),
+                        onTap: () {
+                          navToPilihan(context);
+                        },
+                        child: CircleAvatar(
+                            backgroundColor: Colors.grey.withOpacity(0.2),
+                            child: Icon(Icons.arrow_back_ios_new, size: 17)))),
                 Padding(
                   padding: EdgeInsets.only(top: 70),
                   child: const Text("Sign in now",
@@ -71,7 +70,7 @@ class _SignInPageState extends State<SignInPage> {
                                           hintStyle: TextStyle(
                                               fontWeight: FontWeight.w400,
                                               fontSize: 15,
-                                              color: Colors.black))))),
+                                              color: Colors.black)))))
                         ])),
                 const SizedBox(height: 25),
                 Container(
@@ -134,7 +133,9 @@ class _SignInPageState extends State<SignInPage> {
                           TextStyle(color: bluebg, fontWeight: FontWeight.w500),
                     ))),
                 GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      navToDashboard(context);
+                    },
                     child: Container(
                         alignment: AlignmentDirectional.center,
                         margin: const EdgeInsets.symmetric(
@@ -157,7 +158,9 @@ class _SignInPageState extends State<SignInPage> {
                           style:
                               TextStyle(fontSize: 14, color: Colors.black54)),
                       GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            navToSignUp(context);
+                          },
                           child: Text(
                             "Sign Up",
                             style: TextStyle(
