@@ -31,7 +31,7 @@ class _SignInPageState extends State<SignInPage> {
                     alignment: Alignment.centerLeft,
                     child: GestureDetector(
                         onTap: () {
-                          navToPilihan(context);
+                          navToBackPage(context);
                         },
                         child: CircleAvatar(
                             backgroundColor: Colors.grey.withOpacity(0.2),
